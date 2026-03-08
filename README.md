@@ -69,8 +69,11 @@ https://www.linkedin.com/in/sean-codner-aa60822b
 
 ## Portfolio Projects
 
-• ATM Network Operations Analysis
-  SQL analysis of ATM withdrawal demand, vendor workload, and regional performance.
 
-• Regional Sales SQL Analysis
-  Sales data exploration identifying trends in product performance and regional demand.
+ATM Network Operations Analysis
+SQL analysis of ATM withdrawal demand, vendor workload, and regional performance.
+Repository: https://github.com/SEANSKIDATA/atm-network-analysis
+
+Regional Sales SQL Analysis
+Sales data exploration identifying product and regional trends.
+Repository: https://github.com/SEANSKIDATA/regional-sales-sql
