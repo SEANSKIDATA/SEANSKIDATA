@@ -63,7 +63,7 @@ My long-term interest is working in roles that combine **data analysis with oper
 
 ---
 
-## Connect With Me
+
 
 ## Connect With Me
 
