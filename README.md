@@ -62,9 +62,15 @@ My long-term interest is working in roles that combine **data analysis with oper
 
 ---
 
-
-
 ## Connect With Me
 
 🔗 LinkedIn  
 https://www.linkedin.com/in/sean-codner-aa60822b
+
+## Portfolio Projects
+
+• ATM Network Operations Analysis
+  SQL analysis of ATM withdrawal demand, vendor workload, and regional performance.
+
+• Regional Sales SQL Analysis
+  Sales data exploration identifying trends in product performance and regional demand.
