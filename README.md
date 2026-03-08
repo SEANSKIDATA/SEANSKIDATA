@@ -1,6 +1,6 @@
 # Sean Codner
 
-**Data Analyst | Operations Analytics | SQL | Business Intelligence**
+Operations Data Analyst | SQL | Business Intelligence | Operations Analytics
 
 Houston, Texas
 
@@ -18,13 +18,12 @@ Today I focus on building analytics projects that simulate real operational envi
 
 ## Technical Skills
 
-SQL (MySQL)
-Data Analysis
-Operational Metrics Analysis
-Business Intelligence
-Data Visualization
+SQL (MySQL)  
+Data Analysis  
+Operational Metrics Analysis  
+Business Intelligence  
+Data Visualization  
 Process Optimization
-
 ---
 
 ## Featured Projects
