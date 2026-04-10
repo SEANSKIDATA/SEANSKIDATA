@@ -1,5 +1,5 @@
 # Sean Codner
-### Operations Data Analyst — SQL | Business Intelligence | Operational Decision Support
+### Operations Data Analyst | SQL · Python · Tableau | Financial Services & Fintech
 
 📍 Houston, Texas &nbsp;|&nbsp; 🔗 [LinkedIn](https://www.linkedin.com/in/sean-codner-aa60822b)
 
@@ -7,55 +7,88 @@
 
 ## The Way I Think About Data
 
-Most analytics projects show you what happened.  
+Most analytics projects show you what happened.
 Mine are built to answer **what do we do next.**
 
 I come from operations — ATM network management, call center forecasting, high-volume service environments where bad decisions cost real money in real time. That background shapes how I build analytical frameworks: not just querying data, but modeling the decisions that data has to support.
 
-> A low-volume casino ATM located 140 miles from the nearest branch with 1.2 days of cash remaining is more operationally urgent than a high-volume urban machine with 6 days of runway. Standard reporting is blind to that. My work isn't.
+> A low-volume casino ATM located 142 miles from the nearest branch with 0.8 days of cash remaining is more operationally urgent than a high-volume urban machine with 6 days of runway. Standard reporting is blind to that. My work isn't.
 
 ---
 
 ## Technical Skills
 
 ![SQL](https://img.shields.io/badge/SQL-MySQL-4479A1?style=flat&logo=mysql&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat&logo=numpy&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557c?style=flat)
+![Tableau](https://img.shields.io/badge/Tableau-E97627?style=flat&logo=tableau&logoColor=white)
 ![Business Intelligence](https://img.shields.io/badge/Business-Intelligence-F2C811?style=flat&logo=powerbi&logoColor=black)
-![Data Analysis](https://img.shields.io/badge/Data-Analysis-brightgreen?style=flat)
-![Operational Analytics](https://img.shields.io/badge/Operational-Analytics-orange?style=flat)
-![Data Visualization](https://img.shields.io/badge/Data-Visualization-9B59B6?style=flat)
-![Process Optimization](https://img.shields.io/badge/Process-Optimization-blue?style=flat)
 
-**Domain expertise:** ATM network operations · Call center forecasting · Service level management · Vendor workload analysis · Cash management analytics · Regional performance benchmarking
+**Domain expertise:** ATM network operations · Cash management analytics · Call center forecasting · Service level management · Vendor workload analysis · Regional performance benchmarking · Operational risk scoring
 
 ---
 
-## Featured Projects
+## Portfolio — ATM Analytics Series
 
-### 🏧 ATM Network Analysis — Version 2
+Three projects. One argument: **volume is the wrong primary signal for operational risk.**
+
+The portfolio is structured as a deliberate analytical progression — each project builds on the last, expanding both the technical toolkit and the depth of the business answer.
+
+---
+
+### 🏧 Project 3 — ATM Predictive Demand Model
+**[→ View Repository](https://github.com/SEANSKIDATA/ATM-Predictive-Demand-Model)** &nbsp;|&nbsp; **[→ Live Tableau Dashboard](https://public.tableau.com/app/profile/sean.codner/viz/ATMPredictiveDemandModel/Dashboard1)**
+
+**Tools:** Python · Pandas · NumPy · Matplotlib · SQL · Tableau · MySQL
+
+**The business question:** Which ATMs will hit a critical cash threshold in the next 72 hours — and what should operations teams do about it?
+
+**The output:** A 72-hour forward forecast with a prioritized dispatch action for every machine in the network. Not just prediction — decision.
+
+| | Metric | Value |
+|---|---|---|
+| 💰 | Revenue at Risk (72hr) | $830,880 |
+| 🚨 | Critical ATMs | 5 locations |
+| ⚡ | Immediate Dispatch Required | 5 machines |
+| ⏱ | Avg Days to Failure (At-Risk) | 0.6 days |
+
+**Key insight — The Penn Station Effect:** When tax preparation services transitioned from issuing refund checks to loading refunds onto debit cards, machines classified as low-priority all year suddenly ran dry within days. Customers walked directly from tax offices to the nearest ATM and withdrew at the $500 maximum limit — repeatedly. This model flags those machines before it happens.
+
+---
+
+### 🔍 Project 2 — ATM Network Risk Intelligence
+**[→ View Repository](https://github.com/SEANSKIDATA/ATM-Network-Risk-Intelligence)**
+
+**Tools:** SQL · MySQL · Window Functions · CTEs
+
+**The business question:** How do we prioritize replenishment decisions when not all low-cash machines are equally urgent?
+
+**The output:** A composite risk scoring framework that combines cash position, terminal distance, location type, and revenue impact into a single sortable priority register.
+
+**Key insight:** A casino ATM 142 miles from the nearest branch with zero cash tolerance is categorically more urgent than a local retail machine at the same cash level. Standard reporting ranks them equally. This framework doesn't.
+
+---
+
+### 📊 Project 1 — ATM Network Analysis Version 2
 **[→ View Repository](https://github.com/SEANSKIDATA/ATM-Network-Analysis-Version-2)**
 
-Operational decision-support framework for ATM network cash management — built to solve a problem standard reporting misses.
+**Tools:** SQL · MySQL · Aggregations · Joins
 
-**The core insight:** Volume alone doesn't define risk. A rural casino ATM with zero cash tolerance and a 4x emergency replenishment multiplier demands prioritization regardless of transaction count. This project builds the analytical layer to surface that.
+**The business question:** What is the current operational risk state of the network?
 
-**What's in it:**
-- 50+ ATM synthetic dataset reflecting realistic network operating conditions
-- Terminal classification: Local / Remote / Over The Road (by distance from branch)
-- Cash tolerance tiers by location type: Zero / Low / Medium / High
-- Forward-looking `days_until_empty` calculation per machine
-- Emergency vs. scheduled replenishment cost modeling (2.5x–4.0x multipliers)
-- 5 production-ready SQL queries including Network Criticality Priority Register and 30-Day Transaction Trend Analysis
-
-**Skills demonstrated:** Window functions · PARTITION BY · CTEs · Cost modeling · Operational risk scoring · Synthetic dataset design
+**The output:** Foundation SQL analysis establishing the core argument — volume is a misleading primary signal for ATM cash management risk.
 
 ---
 
-### 🔍 ATM Network Operations Analysis — Version 1
-**[→ View Repository](https://github.com/SEANSKIDATA/atm-network-operations-analysis)**
+## Portfolio Progression
 
-Foundation project modeling ATM network performance including withdrawal demand, vendor workload analysis, and regional performance comparisons. The analytical groundwork that Version 2 builds on.
-
-**Skills demonstrated:** SQL Joins · Aggregations · Window Functions · PARTITION BY · Operational analytics
+| Project | Tool | Business Question | Status |
+|---|---|---|---|
+| ATM Network Analysis V2 | SQL | What is the current risk state? | ✅ Live |
+| ATM Network Risk Intelligence | SQL | How do we prioritize decisions? | ✅ Live |
+| **ATM Predictive Demand Model** | **Python + Tableau** | **Which ATMs go critical in 72 hours?** | ✅ Live |
 
 ---
 
@@ -63,15 +96,15 @@ Foundation project modeling ATM network performance including withdrawal demand,
 
 My career has been built in operational environments where the data isn't academic — it drives staffing decisions, vendor dispatches, service level compliance, and cash deployment under real time constraints.
 
-- **ATM Network Operations** — cash management, replenishment scheduling, network performance monitoring
-- **Telecommunications Operations** — call center service level forecasting, multi-site staffing coordination, intraday volume management
-- **Current Focus** — building a public analytics portfolio that demonstrates operational thinking, not just SQL syntax
+- **ATM Network Operations** — 18+ years managing nationwide ATM networks (45,000+ terminals). Cash management, replenishment scheduling, network performance monitoring, vendor coordination.
+- **Telecommunications Operations** — Call center service level forecasting, multi-site staffing coordination, intraday volume management across nationwide operations.
+- **Current Focus** — Building a public analytics portfolio that demonstrates operational thinking, not just SQL syntax.
 
 ---
 
 ## Connect
 
-I'm focused on roles that sit at the intersection of **data analysis and operational decision-making** — financial services, fintech, ATM operations, logistics, or any environment where the data has to perform under pressure.
+I'm focused on roles at the intersection of **data analysis and operational decision-making** — financial services, fintech, ATM operations, logistics, or any environment where the data has to perform under pressure.
 
 🔗 [LinkedIn — Sean Codner](https://www.linkedin.com/in/sean-codner-aa60822b)
 
