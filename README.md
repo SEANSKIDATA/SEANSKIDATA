@@ -1,5 +1,5 @@
 # Sean Codner
-### Operations Data Analyst | SQL · Python · Tableau | Financial Services & Fintech
+### Workforce Planning & Operations Analytics | WFM · SQL · Python · Tableau | Fintech & Financial Services
 
 📍 Houston, Texas &nbsp;|&nbsp; 🔗 [LinkedIn](https://www.linkedin.com/in/sean-codner-aa60822b)
 
@@ -26,15 +26,66 @@ I come from operations — ATM network management, call center forecasting, high
 ![Tableau](https://img.shields.io/badge/Tableau-E97627?style=flat&logo=tableau&logoColor=white)
 ![Business Intelligence](https://img.shields.io/badge/Business-Intelligence-F2C811?style=flat&logo=powerbi&logoColor=black)
 
-**Domain expertise:** ATM network operations · Cash management analytics · Call center forecasting · Service level management · Vendor workload analysis · Regional performance benchmarking · Operational risk scoring
+**Domain expertise:** Workforce Management · Intraday Staffing · Erlang C · Shrinkage Modeling · ATM Network Operations · Cash Management Analytics · Call Center Forecasting · Service Level Management · Operational Risk Scoring · Executive Reporting
 
 ---
 
-## Portfolio — ATM Analytics Series
+## Portfolio
+
+Two parallel tracks. One argument: **operational analytics is most valuable when it moves beyond describing what happened and starts improving what happens next.**
+
+---
+
+### 📋 Track 1 — Workforce Planning & Optimization
+
+---
+
+### 🏗️ WFM Planning & Optimization Engine *(Active Development)*
+**[→ View Repository](https://github.com/SEANSKIDATA/WFM-Demand-Forecasting)**
+
+**Tools:** Python · Pandas · NumPy · Matplotlib · Erlang C · Jupyter
+
+**The business question:** Given real contact-center arrival data, can we build the full WFM planning chain — from raw interval arrivals to staffing recommendations a manager can act on?
+
+**The answer:** Yes. And the most important finding isn't in the forecast accuracy. It's in what happens after.
+
+| Module | Description | Status |
+|--------|-------------|--------|
+| 1 — Forecast Engine | Interval-level volume forecast, holdout-validated (WAPE 21.2%) | ✅ Complete |
+| 2 — Capacity Planning | Erlang C staffing, shrinkage build-up, FTE sizing | ✅ Complete |
+| 3 — Gap Analysis | Required vs scheduled, interval-by-interval, delivered SL | ✅ Complete |
+| 4 — Optimization Engine | Greedy redistribution — **+20.2% SL recovery, zero new hires** | ✅ Complete |
+| 5 — Decision Lab | What-if simulator: redistribution, AHT, shrinkage, headcount levers | ✅ Complete |
+| 6 — Multichannel | Voice + Chat (Erlang C + concurrency) + Email (backlog model) | ✅ Complete |
+| 7 — Executive Dashboard | One-page KPI summary for operational leadership | 🔄 Planned |
+| 8 — Executive Brief | Leadership summary in business language — no code | 🔄 Planned |
+
+**Key finding:**
+
+> Total scheduled headcount was within **1.6% of calculated requirements** — yet **53% of intervals were understaffed**, **44% overstaffed**, and delivered service level was **62.4% vs an 80% target.**
+>
+> The problem wasn't headcount. The problem was distribution.
+
+**Optimization Engine result:** Redistributing existing agents without adding a single FTE recovered **+20.2% service level** — crossing the 80% target.
+
+**Decision Lab — What-if results:**
+
+| Lever | Service Level | Hits 80%? |
+|-------|--------------|-----------|
+| Baseline (current schedule) | 62.4% | ✗ |
+| Redistribute only (no new hires) | 82.5% | ✓ |
+| Add 5 FTEs | 95.5% | ✓ |
+| Reduce AHT 15% | 76.2% | ✗ |
+| Reduce shrinkage 4pts | 69.3% | ✗ |
+| Redistribute + AHT 15% + Shrinkage 4pts | 94.4% | ✓ |
+
+*Peer-validated by a WFM practitioner at Encore Capital Group (13+ years experience).*
+
+---
+
+### 📊 Track 2 — ATM Network Analytics Series
 
 Three projects. One argument: **volume is the wrong primary signal for operational risk.**
-
-The portfolio is structured as a deliberate analytical progression — each project builds on the last, expanding both the technical toolkit and the depth of the business answer.
 
 ---
 
@@ -45,8 +96,6 @@ The portfolio is structured as a deliberate analytical progression — each proj
 
 **The business question:** Which ATMs will hit a critical cash threshold in the next 72 hours — and what should operations teams do about it?
 
-**The output:** A 72-hour forward forecast with a prioritized dispatch action for every machine in the network. Not just prediction — decision.
-
 | | Metric | Value |
 |---|---|---|
 | 💰 | Revenue at Risk (72hr) | $830,880 |
@@ -54,7 +103,7 @@ The portfolio is structured as a deliberate analytical progression — each proj
 | ⚡ | Immediate Dispatch Required | 5 machines |
 | ⏱ | Avg Days to Failure (At-Risk) | 0.6 days |
 
-**Key insight — The Penn Station Effect:** When tax preparation services transitioned from issuing refund checks to loading refunds onto debit cards, machines classified as low-priority all year suddenly ran dry within days. Customers walked directly from tax offices to the nearest ATM and withdrew at the $500 maximum limit — repeatedly. This model flags those machines before it happens.
+**Key insight — The Refund Rush Effect:** Tax refunds had always been issued by check — until one season they weren't. With no advance notice, a major tax preparer switched to loading refunds directly onto debit cards. The first sign anything was wrong was iron-level alerts firing on machines that had never been a problem. A call to the store revealed what the data couldn't: every customer walked out with a card instead of a check and sprinted to the nearest ATM to pull their cash — often at the $500 limit, back to back. Standard reporting was blind to the cause. This model builds the institutional memory so the next pattern change doesn't blindside the network.
 
 ---
 
@@ -63,11 +112,7 @@ The portfolio is structured as a deliberate analytical progression — each proj
 
 **Tools:** SQL · MySQL · Window Functions · CTEs
 
-**The business question:** How do we prioritize replenishment decisions when not all low-cash machines are equally urgent?
-
-**The output:** A composite risk scoring framework that combines cash position, terminal distance, location type, and revenue impact into a single sortable priority register.
-
-**Key insight:** A casino ATM 142 miles from the nearest branch with zero cash tolerance is categorically more urgent than a local retail machine at the same cash level. Standard reporting ranks them equally. This framework doesn't.
+A composite risk scoring framework combining cash position, terminal distance, location type, and revenue impact into a single sortable priority register. A casino ATM 142 miles from the nearest branch with zero cash tolerance is categorically more urgent than a local retail machine at the same cash level. This framework reflects that.
 
 ---
 
@@ -76,38 +121,37 @@ The portfolio is structured as a deliberate analytical progression — each proj
 
 **Tools:** SQL · MySQL · Aggregations · Joins
 
-**The business question:** What is the current operational risk state of the network?
-
-**The output:** Foundation SQL analysis establishing the core argument — volume is a misleading primary signal for ATM cash management risk.
+Foundation SQL analysis establishing the core argument — volume is a misleading primary signal for ATM cash management risk.
 
 ---
 
 ## Portfolio Progression
 
-| Project | Tool | Business Question | Status |
-|---|---|---|---|
-| ATM Network Analysis V2 | SQL | What is the current risk state? | ✅ Live |
-| ATM Network Risk Intelligence | SQL | How do we prioritize decisions? | ✅ Live |
-| **ATM Predictive Demand Model** | **Python + Tableau** | **Which ATMs go critical in 72 hours?** | ✅ Live |
+| Project | Track | Tool | Status |
+|---------|-------|------|--------|
+| ATM Network Analysis V2 | ATM Analytics | SQL | ✅ Live |
+| ATM Network Risk Intelligence | ATM Analytics | SQL | ✅ Live |
+| ATM Predictive Demand Model | ATM Analytics | Python + Tableau | ✅ Live |
+| WFM Planning & Optimization Engine | Workforce Planning | Python + Erlang C | ✅ Modules 1–6 live |
 
 ---
 
 ## Background
 
-My career has been built in operational environments where the data isn't academic — it drives staffing decisions, vendor dispatches, service level compliance, and cash deployment under real time constraints.
-
-- **ATM Network Operations** — 18+ years managing nationwide ATM networks (45,000+ terminals). Cash management, replenishment scheduling, network performance monitoring, vendor coordination.
-- **Telecommunications Operations** — Call center service level forecasting, multi-site staffing coordination, intraday volume management across nationwide operations.
-- **Current Focus** — Building a public analytics portfolio that demonstrates operational thinking, not just SQL syntax.
+- **Workforce Management** — MCI Telecommunications (1994–1997). Intraday WFM for a 350+ agent contact center across Eastern/Central TZ sites. Real-time staffing against abandonment rate SLAs, schedule exception coding, IEX TotalView.
+- **ATM Network Operations** — Cardtronics/NCR (2004–2022). 45,000+ terminal network, 98% contractual uptime SLA, ~$8M annual theft-loss avoidance coordination. Built and maintained executive reporting from the founding era.
+- **Fintech Operations** — Margo/PowerCoin (2023). Built cash operations from scratch at an early-stage Bitcoin ATM startup.
+- **Current** — Independent analytics consultant. Building this portfolio.
 
 ---
 
 ## Connect
 
-I'm focused on roles at the intersection of **data analysis and operational decision-making** — financial services, fintech, ATM operations, logistics, or any environment where the data has to perform under pressure.
+I'm focused on remote roles at the intersection of **workforce management, operations analytics, and data analysis** — fintech, healthtech, SaaS, payments, or any environment where the data has to perform under pressure.
 
 🔗 [LinkedIn — Sean Codner](https://www.linkedin.com/in/sean-codner-aa60822b)
 
 ---
 
-*All datasets in this portfolio are synthetic — purpose-built to reflect realistic operating conditions while containing no proprietary or personally identifiable information.*
+*Portfolio datasets are real (Technion Anonymous Bank call-center data) or synthetic — purpose-built to reflect realistic operating conditions. WFM overlay assumptions are labeled throughout.*
+
