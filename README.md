@@ -1,157 +1,299 @@
 # Sean Codner
-### Workforce Planning & Operations Analytics | WFM · SQL · Python · Tableau | Fintech & Financial Services
 
-📍 Houston, Texas &nbsp;|&nbsp; 🔗 [LinkedIn](https://www.linkedin.com/in/sean-codner-aa60822b)
+## Enterprise Operations Analytics | Workforce Planning | Capacity Optimization | Decision Support | SQL • Python • Tableau
 
----
-
-## The Way I Think About Data
-
-Most analytics projects show you what happened.
-Mine are built to answer **what do we do next.**
-
-I come from operations — ATM network management, call center forecasting, high-volume service environments where bad decisions cost real money in real time. That background shapes how I build analytical frameworks: not just querying data, but modeling the decisions that data has to support.
-
-> A low-volume casino ATM located 142 miles from the nearest branch with 0.8 days of cash remaining is more operationally urgent than a high-volume urban machine with 6 days of runway. Standard reporting is blind to that. My work isn't.
+📍 Houston, Texas
+🔗 LinkedIn
 
 ---
 
-## Technical Skills
+# The Way I Think About Data
 
-![SQL](https://img.shields.io/badge/SQL-MySQL-4479A1?style=flat&logo=mysql&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat&logo=numpy&logoColor=white)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-11557c?style=flat)
-![Tableau](https://img.shields.io/badge/Tableau-E97627?style=flat&logo=tableau&logoColor=white)
-![Business Intelligence](https://img.shields.io/badge/Business-Intelligence-F2C811?style=flat&logo=powerbi&logoColor=black)
+Most analytics projects explain **what happened.**
 
-**Domain expertise:** Workforce Management · Intraday Staffing · Erlang C · Shrinkage Modeling · ATM Network Operations · Cash Management Analytics · Call Center Forecasting · Service Level Management · Operational Risk Scoring · Executive Reporting
+Mine are designed to answer a different question:
 
----
+> **What should we do next?**
 
-## Portfolio
+My career has been built inside operations—ATM network management, workforce planning, contact centers, and high-volume service environments where decisions affect customers, service levels, and revenue in real time.
 
-Two parallel tracks. One argument: **operational analytics is most valuable when it moves beyond describing what happened and starts improving what happens next.**
+That background shapes every project I build.
 
----
+I don't view analytics as reporting.
 
-### 📋 Track 1 — Workforce Planning & Optimization
+I view analytics as **decision support.**
 
----
+A low-volume casino ATM located 142 miles from the nearest branch with only 0.8 days of cash remaining is operationally more critical than a high-volume urban ATM with six days of runway.
 
-### 🏗️ WFM Planning & Optimization Engine *(Active Development)*
-**[→ View Repository](https://github.com/SEANSKIDATA/WFM-Demand-Forecasting)**
+Traditional reporting treats them differently.
 
-**Tools:** Python · Pandas · NumPy · Matplotlib · Erlang C · Jupyter
-
-**The business question:** Given real contact-center arrival data, can we build the full WFM planning chain — from raw interval arrivals to staffing recommendations a manager can act on?
-
-**The answer:** Yes. And the most important finding isn't in the forecast accuracy. It's in what happens after.
-
-| Module | Description | Status |
-|--------|-------------|--------|
-| 1 — Forecast Engine | Interval-level volume forecast, holdout-validated (WAPE 21.2%) | ✅ Complete |
-| 2 — Capacity Planning | Erlang C staffing, shrinkage build-up, FTE sizing | ✅ Complete |
-| 3 — Gap Analysis | Required vs scheduled, interval-by-interval, delivered SL | ✅ Complete |
-| 4 — Optimization Engine | Greedy redistribution — **+20.2% SL recovery, zero new hires** | ✅ Complete |
-| 5 — Decision Lab | What-if simulator: redistribution, AHT, shrinkage, headcount levers | ✅ Complete |
-| 6 — Multichannel | Voice + Chat (Erlang C + concurrency) + Email (backlog model) | ✅ Complete |
-| 7 — Executive Dashboard | One-page KPI summary for operational leadership | 🔄 Planned |
-| 8 — Executive Brief | Leadership summary in business language — no code | 🔄 Planned |
-
-**Key finding:**
-
-> Total scheduled headcount was within **1.6% of calculated requirements** — yet **53% of intervals were understaffed**, **44% overstaffed**, and delivered service level was **62.4% vs an 80% target.**
->
-> The problem wasn't headcount. The problem was distribution.
-
-**Optimization Engine result:** Redistributing existing agents without adding a single FTE recovered **+20.2% service level** — crossing the 80% target.
-
-**Decision Lab — What-if results:**
-
-| Lever | Service Level | Hits 80%? |
-|-------|--------------|-----------|
-| Baseline (current schedule) | 62.4% | ✗ |
-| Redistribute only (no new hires) | 82.5% | ✓ |
-| Add 5 FTEs | 95.5% | ✓ |
-| Reduce AHT 15% | 76.2% | ✗ |
-| Reduce shrinkage 4pts | 69.3% | ✗ |
-| Redistribute + AHT 15% + Shrinkage 4pts | 94.4% | ✓ |
-
-*Peer-validated by a WFM practitioner at Encore Capital Group (13+ years experience).*
+Operational analytics should not.
 
 ---
 
-### 📊 Track 2 — ATM Network Analytics Series
+# Enterprise Portfolio
 
-Three projects. One argument: **volume is the wrong primary signal for operational risk.**
+**4 Enterprise Analytics Projects**
 
----
+**2 Operational Domains**
 
-### 🏧 Project 3 — ATM Predictive Demand Model
-**[→ View Repository](https://github.com/SEANSKIDATA/ATM-Predictive-Demand-Model)** &nbsp;|&nbsp; **[→ Live Tableau Dashboard](https://public.tableau.com/app/profile/sean.codner/viz/ATMPredictiveDemandModel/Dashboard1)**
+**18+ Years of Enterprise Operations Experience**
 
-**Tools:** Python · Pandas · NumPy · Matplotlib · SQL · Tableau · MySQL
-
-**The business question:** Which ATMs will hit a critical cash threshold in the next 72 hours — and what should operations teams do about it?
-
-| | Metric | Value |
-|---|---|---|
-| 💰 | Revenue at Risk (72hr) | $830,880 |
-| 🚨 | Critical ATMs | 5 locations |
-| ⚡ | Immediate Dispatch Required | 5 machines |
-| ⏱ | Avg Days to Failure (At-Risk) | 0.6 days |
-
-**Key insight — The Refund Rush Effect:** Tax refunds had always been issued by check — until one season they weren't. With no advance notice, a major tax preparer switched to loading refunds directly onto debit cards. The first sign anything was wrong was iron-level alerts firing on machines that had never been a problem. A call to the store revealed what the data couldn't: every customer walked out with a card instead of a check and sprinted to the nearest ATM to pull their cash — often at the $500 limit, back to back. Standard reporting was blind to the cause. This model builds the institutional memory so the next pattern change doesn't blindside the network.
+Specializing in transforming operational data into actionable business decisions.
 
 ---
 
-### 🔍 Project 2 — ATM Network Risk Intelligence
-**[→ View Repository](https://github.com/SEANSKIDATA/ATM-Network-Risk-Intelligence)**
+# Technical Skills
 
-**Tools:** SQL · MySQL · Window Functions · CTEs
+**Analytics & Engineering**
 
-A composite risk scoring framework combining cash position, terminal distance, location type, and revenue impact into a single sortable priority register. A casino ATM 142 miles from the nearest branch with zero cash tolerance is categorically more urgent than a local retail machine at the same cash level. This framework reflects that.
+* SQL
+* Python
+* Pandas
+* NumPy
+* Matplotlib
+* Tableau
+* Business Intelligence
 
----
+**Domain Expertise**
 
-### 📊 Project 1 — ATM Network Analysis Version 2
-**[→ View Repository](https://github.com/SEANSKIDATA/ATM-Network-Analysis-Version-2)**
-
-**Tools:** SQL · MySQL · Aggregations · Joins
-
-Foundation SQL analysis establishing the core argument — volume is a misleading primary signal for ATM cash management risk.
-
----
-
-## Portfolio Progression
-
-| Project | Track | Tool | Status |
-|---------|-------|------|--------|
-| ATM Network Analysis V2 | ATM Analytics | SQL | ✅ Live |
-| ATM Network Risk Intelligence | ATM Analytics | SQL | ✅ Live |
-| ATM Predictive Demand Model | ATM Analytics | Python + Tableau | ✅ Live |
-| WFM Planning & Optimization Engine | Workforce Planning | Python + Erlang C | ✅ Modules 1–6 live |
-
----
-
-## Background
-
-- **Workforce Management** — MCI Telecommunications (1994–1997). Intraday WFM for a 350+ agent contact center across Eastern/Central TZ sites. Real-time staffing against abandonment rate SLAs, schedule exception coding, IEX TotalView.
-- **ATM Network Operations** — Cardtronics/NCR (2004–2022). 45,000+ terminal network, 98% contractual uptime SLA, ~$8M annual theft-loss avoidance coordination. Built and maintained executive reporting from the founding era.
-- **Fintech Operations** — Margo/PowerCoin (2023). Built cash operations from scratch at an early-stage Bitcoin ATM startup.
-- **Current** — Independent analytics consultant. Building this portfolio.
+* Workforce Management
+* Workforce Capacity Planning
+* Intraday Staffing
+* Erlang C Modeling
+* Shrinkage Planning
+* Service Level Management
+* Call Center Forecasting
+* ATM Network Operations
+* Cash Management Analytics
+* Operational Risk Intelligence
+* Executive Decision Support
 
 ---
 
-## Connect
+# Portfolio
 
-I'm focused on remote roles at the intersection of **workforce management, operations analytics, and data analysis** — fintech, healthtech, SaaS, payments, or any environment where the data has to perform under pressure.
+Two parallel tracks.
 
-🔗 [LinkedIn — Sean Codner](https://www.linkedin.com/in/sean-codner-aa60822b)
+One philosophy.
+
+> **Operational analytics creates the greatest value when it moves beyond describing operations and begins improving operational decisions.**
 
 ---
 
-*Portfolio datasets are real (Technion Anonymous Bank call-center data) or synthetic — purpose-built to reflect realistic operating conditions. WFM overlay assumptions are labeled throughout.*
+# 📋 Track 1 — Enterprise Workforce Planning & Optimization
+
+## 🏗️ Enterprise Workforce Planning & Optimization Engine *(Active Development)*
+
+→ View Repository
+
+**Tools**
+
+Python • Pandas • NumPy • Matplotlib • Erlang C • Jupyter Notebook
+
+### Business Question
+
+Given real contact-center arrival data, can we build an enterprise workforce planning workflow—from interval-level forecasting through staffing recommendations that leadership can act upon?
+
+The most valuable insight wasn't the forecast itself.
+
+It was what happened **after** the forecast.
+
+---
+
+## Current Development Status
+
+| Module                        | Description                                                     | Status |
+| ----------------------------- | --------------------------------------------------------------- | :----: |
+| Forecast Engine               | Interval-level forecasting with holdout validation (21.2% WAPE) |    ✅   |
+| Capacity Planning             | Erlang C staffing, shrinkage modeling, FTE sizing               |    ✅   |
+| Staffing Gap Analysis         | Required vs. scheduled staffing by interval                     |    ✅   |
+| Workforce Optimization Engine | Staffing redistribution without additional hiring               |    ✅   |
+| Decision Lab                  | Scenario simulator for staffing decisions                       |    ✅   |
+| Multichannel Planning         | Voice, Chat, Email planning methodologies                       |    ✅   |
+| Executive Dashboard           | Leadership KPI dashboard                                        |   🔄   |
+| Executive Brief               | Executive summary and recommendations                           |   🔄   |
+
+---
+
+## Validated Findings
+
+| Metric                  |     Result |
+| ----------------------- | ---------: |
+| Forecast Accuracy       | 21.2% WAPE |
+| Staffing Variance       |      -1.6% |
+| Understaffed Intervals  |        53% |
+| Overstaffed Intervals   |        44% |
+| Balanced Intervals      |         3% |
+| Delivered Service Level |      62.4% |
+| Target Service Level    |        80% |
+
+These findings were independently validated to ensure that every business conclusion accurately reflects the underlying calculations.
+
+### Key Insight
+
+Total scheduled staffing was within **1.6%** of calculated requirements.
+
+Yet:
+
+* 53% of operating intervals were understaffed.
+* 44% were overstaffed.
+* Service level achieved only **62.4%** against an **80%** target.
+
+The issue wasn't total staffing.
+
+It was **interval-level workforce distribution.**
+
+---
+
+## Workforce Optimization
+
+Redistributing existing staffing—without adding a single FTE—recovered approximately **20 percentage points** of service level and exceeded the 80% target.
+
+The project demonstrates how workforce analytics can improve operational performance before recommending additional hiring.
+
+---
+
+## Decision Lab
+
+| Scenario                    | Projected Service Level | 80% Target |
+| --------------------------- | ----------------------: | :--------: |
+| Current Schedule            |                   62.4% |      ❌     |
+| Redistribute Existing Staff |                   82.5% |      ✅     |
+| Add Five FTE                |                   95.5% |      ✅     |
+| Reduce AHT 15%              |                   76.2% |      ❌     |
+| Reduce Shrinkage 4 Points   |                   69.3% |      ❌     |
+| Combined Improvements       |                   94.4% |      ✅     |
+
+**Peer-reviewed by an experienced Workforce Management practitioner (Encore Capital Group, 13+ years).**
+
+---
+
+# 📊 Track 2 — Enterprise ATM Operations Analytics
+
+Three projects.
+
+One operational argument.
+
+> **Transaction volume alone is an incomplete measure of operational risk.**
+
+---
+
+## 🏧 ATM Predictive Demand Model
+
+→ View Repository | → Live Tableau Dashboard
+
+Predictive cash forecasting designed to identify which ATMs will become operationally critical within the next 72 hours—and recommend proactive replenishment priorities.
+
+**Highlights**
+
+* Revenue at Risk: **$830,880**
+* Critical Locations: **5**
+* Immediate Dispatches: **5**
+* Average Time to Failure: **0.6 Days**
+
+One of the project's signature concepts is the **Refund Rush Effect**—a real operational scenario demonstrating how external business changes can invalidate historical demand assumptions almost overnight.
+
+---
+
+## 🔍 ATM Network Risk Intelligence
+
+Composite operational risk scoring framework combining:
+
+* Cash Position
+* Distance
+* Location Type
+* Revenue Impact
+* Operational Criticality
+
+into a single enterprise prioritization model.
+
+---
+
+## 📊 ATM Network Analysis Version 2
+
+Foundational SQL analytics demonstrating why transaction volume alone is an incomplete measure of ATM operational priority.
+
+---
+
+# Portfolio Progression
+
+| Project                                             | Focus                | Primary Tools          | Status |
+| --------------------------------------------------- | -------------------- | ---------------------- | :----: |
+| ATM Network Analysis V2                             | ATM Analytics        | SQL                    |    ✅   |
+| ATM Network Risk Intelligence                       | Risk Intelligence    | SQL                    |    ✅   |
+| ATM Predictive Demand Model                         | Predictive Analytics | Python • SQL • Tableau |    ✅   |
+| Enterprise Workforce Planning & Optimization Engine | Workforce Planning   | Python • Erlang C      |   🚧   |
+
+---
+
+# Professional Background
+
+### Workforce Management
+
+**MCI Telecommunications**
+
+Intraday Workforce Management for a 350+ agent multi-site contact center.
+
+Experience includes:
+
+* Intraday staffing
+* Abandonment-rate management
+* Schedule exception coding
+* IEX TotalView
+* Workforce coordination across multiple time zones
+
+---
+
+### Enterprise ATM Operations
+
+**Cardtronics / NCR**
+
+Supported one of North America's largest ATM networks.
+
+Experience includes:
+
+* 45,000+ ATM terminals
+* 98% contractual uptime SLA
+* ~$8M annual theft-loss avoidance coordination
+* Executive operational reporting
+* Enterprise cash logistics
+
+---
+
+### Fintech Operations
+
+**Margo / PowerCoin**
+
+Built cash operations from the ground up for an early-stage Bitcoin ATM operator.
+
+---
+
+### Current
+
+Independent Operations Analytics Consultant focused on enterprise workforce planning, operational analytics, forecasting, and decision support.
+
+---
+
+# Let's Connect
+
+I'm interested in remote opportunities involving:
+
+* Workforce Planning
+* Capacity Planning
+* Operations Analytics
+* Business Intelligence
+* Data Analytics
+* Fintech
+* HealthTech
+* SaaS
+* Payments
+
+particularly where analytics directly support operational decision-making.
+
+🔗 LinkedIn — Sean Codner
+
+---
+
+*Portfolio datasets are either real (Technion "Anonymous Bank" call-center data) or synthetic datasets designed to model realistic enterprise operating environments. All synthetic workforce assumptions are explicitly identified throughout the projects.*
 
